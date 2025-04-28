@@ -36,3 +36,70 @@ select::-ms-expand{ display:none; }
     .paging_box{ font-size: 13px; }
 } /* mobile */
 
+
+
+
+/* cardSection */
+.cardSection{ display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.cardSection .slideBtnWrap{ position: absolute; width: 100%; height: 100%; display: flex; align-items: center; justify-content: space-between; }
+.cardSection .slideBtnWrap .pnBtn{ padding: 100px 40px; background-color: transparent; border: none; position: relative; z-index: 3; }
+.cardSection .slideWrap{ width: 100%; }
+.cardSection .slideWrap .item{ padding: 100px 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; background: skyblue; }
+.cardSection .slideWrap .item.bg2{ background: darkcyan; }
+.cardSection .slideWrap .item .bgTextBox{ white-space: nowrap; color: #fff; font-size: 10vw; font-weight: 500; position: absolute; width: 100%;}
+
+.cardSection .slideWrap .item .card{ position: relative; width: 400px; height: 600px; z-index: 2; }
+.cardSection .slideWrap .item .card .card-front{ 
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: center; 
+    transition: transform .25s, opacity .25s; transform: rotate(-10deg); filter: drop-shadow(0 0 7px #0000004d); border-radius: 30px;
+}
+.cardSection .slideWrap .item .card .card-back{ 
+    border-radius: 30px; overflow: hidden; filter: drop-shadow(0 0 7px #0000004d); transition: transform .5s; 
+    transform: rotate(-10deg) scaleX(0); opacity: 0; transition: transform .5s, opacity .25s;
+    position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat; background-position: center;  
+}
+.cardSection .slideWrap .item .card .card-back .contentWrap{ text-align: center; width: 100%; height: 100%;  display: flex; align-items: center; justify-content: center; padding: 30px; flex-direction: column; background-color: rgba(0,0,0,0.6); color: #fff;  }
+.cardSection .slideWrap .item .card .card-back .contentWrap .title{ font-size: 30px; font-weight: 600; }
+.cardSection .slideWrap .item .card .card-back .contentWrap .content{ font-size: 20px; margin-top: 10px; line-height: 2em; }
+.cardSection .slideWrap .item .card .card-back .contentWrap .viewBtn{  position: absolute; display: flex; align-items: center; justify-content: center; bottom: 50px;  }
+.cardSection .slideWrap .item .card .card-back .contentWrap .viewBtn .btnWrap{ overflow: hidden; position: relative; padding: 10px 40px; border: 1px solid #fff; border-radius: 20px; font-weight: 600; }
+.cardSection .slideWrap .item .card .card-back .contentWrap .viewBtn .btnWrap .hoverBg{ position: absolute; left: 0; top: 0; background-color: #fff; width: 0; height: 100%; transition: width .5s; }
+.cardSection .slideWrap .item .card .card-back .contentWrap .viewBtn .text{ position: relative; z-index: 1; }
+.cardSection .slideWrap .item .card .card-back .contentWrap .viewBtn:hover .text{ color: #222; }
+.cardSection .slideWrap .item .card .card-back .contentWrap .viewBtn:hover .btnWrap .hoverBg{ width: 100%; }
+
+@media screen and (min-width: 650px) { 
+    .cardSection .slideWrap .item .card:hover .card-front{ transition: transform 5s, opacity .25s;  opacity: 0; transform: scaleX(-1) rotate(0); transition: transform .5s;}
+    .cardSection .slideWrap .item .card:hover .card-back{ opacity: 1; transform: rotate(0) scaleX(1); }
+}
+
+@media screen and (max-width: 1250px) { 
+    .cardSection .slideWrap .item .card{ width: 300px; height: 450px; }
+    .cardSection .slideWrap .item .card .card-front{ border-radius: 20px; } 
+    .cardSection .slideWrap .item .card .card-back{ border-radius: 20px; } 
+
+    .cardSection .slideWrap .item .card .card-back .contentWrap .title{ font-size: 20px; }
+    .cardSection .slideWrap .item .card .card-back .contentWrap .content{ font-size: 16px; }
+    .cardSection .slideWrap .item .card .card-back .contentWrap .viewBtn .btnWrap{ font-size: 14px; padding: 5px 20px;}
+
+}
+@media screen and (max-width: 650px) { 
+    .cardSection .slideWrap .item .bgTextBox{ font-size: 15vw; }
+
+    .cardSection .slideWrap .item .card{ width: 50vw; height: 70vw; }
+    .cardSection .slideWrap .item .card .card-front{ border-radius: 3vw; transform: rotate(0); }
+    .cardSection .slideWrap .item .card .card-back{ border-radius: 3vw; transform: rotate(0) translateX(0); }
+    .cardSection .slideWrap .item .card.show .card-front{ transition: transform 5s, opacity .25s;  opacity: 0; transform: scaleX(-1) rotate(0); transition: transform .5s;}
+    .cardSection .slideWrap .item .card .card-back{ transform: rotate(0) scaleX(-1); transition: transform .5s, opacity .25s; }
+    .cardSection .slideWrap .item .card.show .card-back{opacity: 1; transform: rotate(0) scaleX(1); }
+    .cardSection .slideWrap .item .card .card-back .contentWrap{ padding: 3vw; }
+    .cardSection .slideWrap .item .card .card-back .contentWrap .title { font-size: 4.5vw; }
+    .cardSection .slideWrap .item .card .card-back .contentWrap .content{ margin-top: 2vw; font-size: 3vw; line-height: 1.5em; }
+    .cardSection .slideWrap .item .card .card-back .contentWrap .viewBtn .btnWrap{ font-size: 3vw; padding: 1vw 5vw; } 
+
+    .cardSection .slideBtnWrap .pnBtn{ padding: 8vw; margin-top: 30vh; }
+}
+
+
+
+

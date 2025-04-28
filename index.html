@@ -28,29 +28,62 @@
     <!-- <body stye="height: 6218px; overscroll-behavior: none; scroll-behavior: auto;"> -->
     <body>
         <section class="cardSection">
+            <div class="slideBtnWrap">
+                <button type="button" class="pnBtn prevBtn">
+                    <img src="./img/cardSection/prevBtn.png" alt="이전" class="icon" />
+                </button>
+                <button type="button" class="pnBtn nextBtn">
+                    <img src="./img/cardSection/nextBtn.png" alt="다음" class="icon" />
+                </button>
+            </div>
             <div class="slideWrap">
-                <div class="slideBtnWrap">
-                    <button type="button" class="pnBtn prevBtn">
-                        <img src="./img/cardSection/prevBtn.png" alt="이전" class="icon" />
-                    </button>
-                    <button type="button" class="pnBtn nextBtn">
-                        <img src="./img/cardSection/nextBtn.png" alt="다음" class="icon" />
-                    </button>
-                </div>
-                <div class="slideBox">
-                    <div class="swiper mySwiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            <div class="swiper-slide">Slide 4</div>
-                            <div class="swiper-slide">Slide 5</div>
-                            <div class="swiper-slide">Slide 6</div>
-                            <div class="swiper-slide">Slide 7</div>
-                            <div class="swiper-slide">Slide 8</div>
-                            <div class="swiper-slide">Slide 9</div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <div class="bgTextBox">
+                                    <div class="scrolling-text">부끄러운 차 딴은 알리라 부끄러운 차 딴은 알리라</div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-front" style="background-image: url('./img/cardSection/example.jpg');"></div>
+                                    <div class="card-back" style="background-image: url('./img/cardSection/example.jpg');">
+                                        <div class="contentWrap">
+                                            <div class="title">부끄러운 차 딴은 알리라</div>
+                                            <div class="content">이국 어머니 닮은 북쪽에서 타는 잔디가 많은 청명한 잠, 몸이 지나고 우리 푸른 저었습니다. </div>
+                                            <a href="#" class="viewBtn">
+                                                <div class="btnWrap">
+                                                    <div class="hoverBg"></div>
+                                                    <div class="text">View</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
+                        <div class="swiper-slide">
+                            <div class="item bg2">
+                                <div class="bgTextBox">
+                                    <div class="scrolling-text">부끄러운 차 딴은 알리라2 부끄러운 차 딴은 알리라2 </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-front" style="background-image: url('./img/cardSection/example.jpg');"></div>
+                                    <div class="card-back" style="background-image: url('./img/cardSection/example.jpg');">
+                                        <div class="contentWrap">
+                                            <div class="title">부끄러운 차 딴은 알리라2</div>
+                                            <div class="content">이국 어머니 닮은 북쪽에서 타는 잔디가 많은 청명한 잠, 몸이 지나고 우리 푸른 저었습니다. </div>
+                                            <a href="#" class="viewBtn">
+                                                <div class="btnWrap">
+                                                    <div class="hoverBg"></div>
+                                                    <div class="text">View</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

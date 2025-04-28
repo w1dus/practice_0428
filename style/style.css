@@ -89,8 +89,8 @@ select::-ms-expand{ display:none; }
     .cardSection .slideWrap .item .card{ width: 50vw; height: 70vw; }
     .cardSection .slideWrap .item .card .card-front{ border-radius: 3vw; transform: rotate(0); }
     .cardSection .slideWrap .item .card .card-back{ border-radius: 3vw; transform: rotate(0) translateX(0); }
-    .cardSection .slideWrap .item .card.show .card-front{ transition: transform 5s, opacity .25s;  opacity: 0; transform: scaleX(-1) rotate(0); transition: transform .5s;}
-    .cardSection .slideWrap .item .card .card-back{ transform: rotate(0) scaleX(-1); transition: transform .5s, opacity .25s; }
+    .cardSection .slideWrap .item .card.show .card-front{ transition: transform .5s, opacity .25s;  opacity: 0; transform: scaleX(-1) rotate(0); transition: transform .5s;}
+    .cardSection .slideWrap .item .card .card-back{ transform: rotate(0) scaleX(0); transition: transform .5s, opacity .25s; }
     .cardSection .slideWrap .item .card.show .card-back{opacity: 1; transform: rotate(0) scaleX(1); }
     .cardSection .slideWrap .item .card .card-back .contentWrap{ padding: 3vw; }
     .cardSection .slideWrap .item .card .card-back .contentWrap .title { font-size: 4.5vw; }

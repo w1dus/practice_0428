@@ -101,5 +101,55 @@ select::-ms-expand{ display:none; }
 }
 
 
+/* paralSlideSection */
+.paralSlideSection{ min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #F8F3EC; position: relative; overflow: hidden; padding: 100px 0; }
+.paralSlideSection .inner{ max-width: 100%; }
+.paralSlideSection .hiddenWrap{ max-width: 200px; max-height: 200px; overflow: hidden; width: 20vw; height: 20vw; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.paralSlideSection .titleBox { position: relative; z-index: 2; display: flex; align-items: flex-end; justify-content: space-between; }
+.paralSlideSection .titleBox .title{ font-size: 52px; font-weight: 700; }
+.paralSlideSection .titleBox .moreBtn{ font-weight: 400; font-size: 22px; color: #7f7f7f; }
+.paralSlideSection .slideBox{ width: 100%; position: relative; display: flex; justify-content: center; align-items: center; margin-top: 15px; }
+.paralSlideSection .slideBox .pnBtnWrap{ display: flex; align-items: center; justify-content: space-between; height: 100%; width: calc(1200px + 122px); position: absolute; }
+.paralSlideSection .slideBox .pnBtnWrap .pnBtn{ position: relative; z-index: 2; background: transparent; border: none; }
+.paralSlideSection .slideBox .slideWrap{ z-index: 2;  width: 100vw; max-width: 1200px; position: relative; }
+.paralSlideSection .slideBox .item .imgBox{ overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; height: 50vw; max-height: 490px; border-radius: 10px; background-color: #d9d9d9;  }
+.paralSlideSection .slideBox .item .imgBox .realImg{ transition: transform .8s; width: 100%; height: 100%; position: absolute; background-size: cover; background-repeat: no-repeat; background-position: center; }
+.paralSlideSection .slideBox .swiper-slide-active .item .imgBox{ position: relative; z-index: 1; box-shadow: 12px 13px 17px 0px rgba(0, 0, 0, 0.27); }
+.paralSlideSection .slideBox .item:hover .imgBox .realImg{ transform: scale(1.1); }
+.paralSlideSection .slideBox .item .slideTitle{ align-items: flex-end; display: flex; justify-content: space-between; gap: 10px; }
+.paralSlideSection .slideBox .item .slideTitle .title{ margin-top: 25px; font-size: 22px; font-weight: 500; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical;  }
+.paralSlideSection .slideBox .item .slideTitle .count{ flex-shrink: 0; }
+.paralSlideSection .slideBox .item .slideTitle .gray{ color: #7f7f7f; }
+.paralSlideSection .bar{ margin-top: 50px; height: 6px; background-color: #222; }
 
+@media screen and (max-width: 1350px) { 
+    .paralSlideSection .inner{ width: 80vw; }
+    .paralSlideSection .slideBox .slideWrap{ width:80vw;  }
+    .paralSlideSection .slideBox .pnBtnWrap{ width: calc(100% - 60px); }
+    .paralSlideSection .hiddenWrap{ }
+    .paralSlideSection .slideBox{ width: auto; }
 
+}
+@media screen and (max-width: 1250px) { 
+    .paralSlideSection .titleBox .title{ font-size: 40px; }
+    .paralSlideSection .titleBox .moreBtn{ font-size: 16px; }
+    .paralSlideSection .slideBox .item .slideTitle .count{ font-size: 14px; }
+}
+@media screen and (max-width: 900px) { 
+    .paralSlideSection .inner{ width: 100%; } 
+    .paralSlideSection .titleBox .title{ font-size: 25px; }
+    .paralSlideSection .slideBox{ width: auto; }
+    .paralSlideSection .slideBox .pnBtnWrap{ display: none; }
+    .paralSlideSection .slideBox .item .imgBox{ height: 53vw; max-height: unset; }
+    .paralSlideSection .slideBox .item .slideTitle .title{ margin-top: 10px; font-size: 18px;}
+    .paralSlideSection .slideBox .item .slideTitle .count{ font-size: 13px; }
+
+    .paralSlideSection .hiddenWrap{ min-width: 150px; min-height: 150px; }
+    .paralSlideSection .slideBox{ margin-top: 40px; }
+}
+@media screen and (max-width: 650px) { 
+    .paralSlideSection .titleBox .title{ font-size: 18px; }
+    .paralSlideSection .slideBox .item .imgBox{ height: 70vw; max-height: 539px; }
+    .paralSlideSection .slideBox .item .slideTitle .title{ font-size: 4vw; }
+    .paralSlideSection .slideBox .item .slideTitle .count{ display: none; }
+}

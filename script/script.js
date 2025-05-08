@@ -65,7 +65,7 @@ const paralSlideSection = () => {
                 trigger: slideWrap,
                 start: "top 0%",   
                 end: "bottom top", 
-                markers: true,
+                markers: false,
                 onEnter: () => {
                     gsap.to(".paralSlideSection .hiddenWrap", {
                         duration: 1,  // 애니메이션 지속 시간

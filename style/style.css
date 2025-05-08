@@ -124,15 +124,16 @@ select::-ms-expand{ display:none; }
 
 @media screen and (max-width: 1350px) { 
     .paralSlideSection .inner{ width: 80vw; }
+    .paralSlideSection .slideBox{ margin-top: 1vw; }
     .paralSlideSection .slideBox .slideWrap{ width:80vw;  }
     .paralSlideSection .slideBox .pnBtnWrap{ width: calc(100% - 60px); }
-    .paralSlideSection .hiddenWrap{ }
     .paralSlideSection .slideBox{ width: auto; }
 
 }
 @media screen and (max-width: 1250px) { 
     .paralSlideSection .titleBox .title{ font-size: 40px; }
     .paralSlideSection .titleBox .moreBtn{ font-size: 16px; }
+    .paralSlideSection .slideBox{ margin-top: 4vw; }
     .paralSlideSection .slideBox .item .slideTitle .count{ font-size: 14px; }
 }
 @media screen and (max-width: 900px) { 
@@ -153,3 +154,12 @@ select::-ms-expand{ display:none; }
     .paralSlideSection .slideBox .item .slideTitle .title{ font-size: 4vw; }
     .paralSlideSection .slideBox .item .slideTitle .count{ display: none; }
 }
+
+/* howRedBricksSection */
+.howRedBricksSection{ position: relative; overflow:hidden; padding: 100px 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+.howRedBricksSection .textList{ position: absolute; display: flex; flex-direction: column; gap: 20vh; }
+.howRedBricksSection .textBox{ font-weight: 700; background-color: #7f7f7f; color: #fff; font-size: 10vw; white-space: nowrap; padding: 0 5vw; border-radius: 20vw; }
+.howRedBricksSection .textBox.redBg{ background-color: #CF3140; }
+.howRedBricksSection .textBox.mintBg{ background-color: #5CC2CE; }
+.howRedBricksSection .textBox .circle{ border-radius: 50%; width: 20vw; height: 20vw; background-color: #fff; }
+

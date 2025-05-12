@@ -3,8 +3,39 @@
 document.addEventListener("DOMContentLoaded", function(e){
     cardSectionSlide();
     paralSlideSection();
+    howRedBricks();
 })
 
+const howRedBricks = () => {
+    const section = document.querySelector('.howRedBricksSection')
+
+    if(section){
+        gsap.to(".howRedBricksSection .textBox.redBg", {
+            duration: 2,
+            x: "-60%",
+            scrollTrigger: {
+                scrub: 0.5,    //true, 1, 2,....
+                trigger: ".howRedBricksSection .textBox.redBg",
+                start: "bottom 80%",
+                end: "bottom 20%", 
+                markers: false,
+            }
+        });
+
+        gsap.to(".howRedBricksSection .textBox.mintBg", {
+            duration: 2,
+            x: "60%",
+            scrollTrigger: {
+                scrub: 0.5,    //true, 1, 2,....
+                trigger: ".howRedBricksSection .textBox.mintBg",
+                start: "bottom 120%",
+                end: "bottom 20%", 
+                markers: false,
+            }
+        });
+    }
+
+}
 
 const paralSlideSection = () => {
     // 슬라이드
